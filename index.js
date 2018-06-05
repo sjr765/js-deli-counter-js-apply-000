@@ -1,45 +1,50 @@
-
-function takeANumber(katzDeliLine, name){
+let counter = 1;
+function takeANumber(katzDeliLine, counter){
+  katzDeliLine.push(name);
+  counter++;
+  return `Welcom ${name} you are number ${katzDeliLine.length} in line`
+  return counter;
+  
   //first make an if statement to check the array has any names in it, and add to the array if not.
   
-  if (katzDeliLine.length === 0){
-    katzDeliLine.unshift(name);
-    return "Welcome, " + name + "." + " You are number 1 in line." 
-  }
+  // if (katzDeliLine.length === 0){
+  //   katzDeliLine.unshift(name);
+  //   return "Welcome, " + name + "." + " You are number 1 in line." 
+  // }
   
   //now we make the rest of the function work if the array has one or more names in it
   
-  else if(katzDeliLine.length >= 1){
+  // else if(katzDeliLine.length >= 1){
     
-    // first, add the name to the back of the array
+  //   // first, add the name to the back of the array
     
-    katzDeliLine.push(name);
+  //   katzDeliLine.push(name);
     
-    //now loop through the array 
+  //   //now loop through the array 
     
-   for (let i=0; i<katzDeliLine.length; i++){
+  // for (let i=0; i<katzDeliLine.length; i++){
      
-        //define the number in line as i-1 since i is the equal to the index
+  //       //define the number in line as i-1 since i is the equal to the index
         
-        let numInLine = i+1;
+  //       let numInLine = i+1;
         
-        //define the customer/name in its own variable as the loop occurs
+  //       //define the customer/name in its own variable as the loop occurs
         
-        let customer = katzDeliLine[i];
+  //       let customer = katzDeliLine[i];
         
-    //check to see if the index is at the last customer in the array, and if it is, return the message to the customer teling them where they are in line
+  //   //check to see if the index is at the last customer in the array, and if it is, return the message to the customer teling them where they are in line
     
-      if (i === katzDeliLine.length-1){
-        return `Welcome, ${customer}. You are number ${numInLine} in line.`
-      }
+  //     if (i === katzDeliLine.length-1){
+  //       return `Welcome, ${customer}. You are number ${numInLine} in line.`
+  //     }
       
-     //if i is not at the end of the array, continue to the next itteration of the loop 
-      else{
-        continue;
-      }
-  }
+  //   //if i is not at the end of the array, continue to the next itteration of the loop 
+  //     else{
+  //       continue;
+  //     }
+  //   }
     
-}
+  }
 
 }
 
